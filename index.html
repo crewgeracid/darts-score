@@ -5,8 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
 	<title>Darts Score</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <script type="text/javascript" src="./js/jquery-3.5.0.min.js"></script>
+  <script type="text/javascript" src="./js/const.js"></script>
+  <script type="text/javascript" src="./js/utils.js"></script>
 </head>
 <body>
-  
+  <div id="main-page">
+    <h1>Darts game</h1>
+    <div id="game-settings">
+      <div><span>Game mode:</span><input type="text" name="game" value="301"></div>
+      <div><span>Player 1:</span><input type="text" name="player" value=""></div>
+      <div><span>Player 2:</span><input type="text" name="player" value=""></div>
+      <div><span>Player 3:</span><input type="text" name="player" value=""></div>
+      <div><span>Player 4:</span><input type="text" name="player" value=""></div>
+    </div>
+    <button id="start">Start game</button>
+  </div>
+
+  <div id="game-page">
+    <div id="header">
+      <h2>Playing <span id="game-type">Game Type</span> darts</h2>
+      <button id="new">Start new game</button>
+      <button id="reset">Reset game</button>
+    </div>
+
+    <div id="message">
+      <div id="info"></div>
+      <div id="error"></div>
+    </div>
+
+    <div id="players">
+      <h3>Players</h3>
+      <div class="player-html-sample">
+        <span class="name">Player Name</span>
+        <span class="score">Score</span>
+        <span class="your-turn-marker">Your turn</span>
+      </div>
+    </div>
+
+    <div id="score-selector-wrapper">
+      <h3>Submit your turn score</h3>
+      <div id="score-options">
+        <div class="score-option-html-sample">
+          <span class="label">Score Value</span>
+          <span class="sign-multi">x</span>
+          <span class="buttons">
+            <button class=" button-html-sample">Multiplication Value</button>
+          </span>
+          <span class="turn-scores">
+            <button class=" turn-score-button-html-sample">Turn Score Value</button>
+          </span>
+        </div>
+      </div>
+      <button id="score-submit">Submit</button>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="./js/player.js"></script>
+  <script type="text/javascript" src="./js/score.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
