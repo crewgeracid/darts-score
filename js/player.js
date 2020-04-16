@@ -11,7 +11,7 @@ function initPlayers($container, players) {
 }
 
 function refreshPlayers($container, players) {
-  var playerIndex = players.findIndex(player => player.turn);
+  var playerIndex = players.findIndex(function(player){ return player.turn; });
   $container.find(".player").each(function(i) {
     var $player = $(this);
     $player.removeClass("turn");
