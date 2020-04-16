@@ -27,10 +27,8 @@ function start() {
     }
   });
 
-  // turn = { ...initTurnSettings};
-  // players = initPlayersSettings.map(a => ({...a}));
-  turn = initTurnSettings;
-  players = initPlayersSettings;
+  turn = { ...initTurnSettings};
+  players = initPlayersSettings.map(function(player){ return {...player}; });
 
   $("#game-type").text(initScoreSettings);
   initPlayers($("#players"), players);
@@ -54,13 +52,13 @@ function refresh() {
 }
 
 function reset() {
-  turn = initTurnSettings;
-  players = initPlayersSettings;
+  turn = { ...initTurnSettings};
+  players = initPlayersSettings.map(function(player){ return {...player}; });
   refresh();
 }
 
 function nextTurn() {
-  var playerIndex = players.findIndex(player => player.turn);
+  var playerIndex = players.findIndex(function(player){ return player.turn; });
   players[playerIndex].score -= turn.score;
   players[playerIndex].turn = false;
   checkScore(playerIndex);
