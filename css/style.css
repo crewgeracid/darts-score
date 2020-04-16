@@ -71,7 +71,7 @@ button:focus {
   margin-left: 10vw;
   margin-bottom: 1em;
   padding-bottom: 2em;
-  border-bottom: 2px solid #ffffff20;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   width: 80vw;
 }
 #game-settings span {
@@ -152,7 +152,7 @@ button#start {
 }
 #score-options .buttons button {
   margin: 0.2em;
-  border: 1px solid #ef6eae60;
+  border: 1px solid rgba(239, 110, 174, 0.5);
 }
 #score-options .turn-scores {
   display: inline-block;
