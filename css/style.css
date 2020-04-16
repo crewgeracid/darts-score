@@ -16,11 +16,11 @@ h1 {
 }
 h2 {
   font-size: 2em;
-  margin: 0 0 1em;
+  margin: 1em 0 1em;
 }
 h3 {
   font-size: 1.5em;
-  margin: 0 0 1em;
+  margin: 1em 0 1em;
 }
 
 input {
@@ -33,8 +33,10 @@ input {
   line-height: 1;
   margin: 0.5em;
   padding: 1em 2em;
+  border-radius: 0;
 }
 input:focus,
+input:active,
 input:hover {
   background: #ef6eae15;
   box-shadow: 0 0 0.8em 0.8em rgba(239,110,174,0.1);
@@ -49,8 +51,10 @@ button {
   line-height: 1;
   margin: 0.5em;
   padding: 1em 2em;
+  border-radius: 0;
 }
 button:hover,
+button:active,
 button:focus {
   border-color: #ED796F;
   color: #fff;
@@ -62,6 +66,13 @@ button:focus {
   font-weight: 500;
   font-size: 1.5em;
   margin-bottom: 2em;
+}
+#game-settings > div:first-child {
+  margin-left: 10vw;
+  margin-bottom: 1em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #ffffff20;
+  width: 80vw;
 }
 #game-settings span {
   display: inline-block;
@@ -75,5 +86,85 @@ button:focus {
 
 
 button#start {
+  font-size: 2em;
+}
+
+
+
+#header {
+  position: relative;
+  overflow: hidden;
+  padding: 0 2vw;
+}
+#header h2 {
+  text-align: left;
+}
+#header .buttons {
+  position: absolute;
+  top: 1em;
+  right: 2vw;
+}
+#header .buttons button {
+  margin-right: 0;
+  margin-left: 1em;
+}
+
+
+#players {
+  padding: 0 2vw;
+  font-size: 1.5em;
+  text-align: left;
+}
+#players .name {
+  display: inline-block;
+  width: 20vw;
+}
+#players .name::after {
+  content: ":";
+}
+#players .player .your-turn-marker {
+  display: none;
+}
+#players .player.turm .your-turn-marker {
+  display: inline-block;
+}
+
+
+
+#score-options {
+  margin-bottom: 2em;
+}
+#score-options .label {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.5em;
+  width: 6vw;
+}
+#score-options .buttons {
+  display: inline-block;
+  width: 38vw;
+}
+#score-options button:focus,
+#score-options button:active,
+#score-options button:hover {
+  background: none;
+  box-shadow: none;
+}
+#score-options .buttons button {
+  margin: 0.2em;
+  border: 1px solid #ef6eae60;
+}
+#score-options .turn-scores {
+  display: inline-block;
+  width: 54vw;
+  text-align: left;
+}
+#score-options .turn-scores button {
+  margin: 0.2em;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+button#score-submit {
   font-size: 2em;
 }

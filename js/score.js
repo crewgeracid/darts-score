@@ -29,7 +29,7 @@ function __initScoreOption(baseScore, multipliers) {
   var $buttons = $scoreOption.find(".buttons");
   $buttons.empty();
   for(var multiplier = 1; multiplier <= multipliers; multiplier++) {
-    var $button = __initScoreButton(baseScore * multiplier, multiplier);
+    var $button = __initScoreButton(baseScore * multiplier, " x " + multiplier);
     $button.click({
       jqScoreOption: $scoreOption,
       baseScore: baseScore,
