@@ -27,8 +27,10 @@ function start() {
     }
   });
 
-  turn = { ...initTurnSettings};
-  players = initPlayersSettings.map(a => ({...a}));
+  // turn = { ...initTurnSettings};
+  // players = initPlayersSettings.map(a => ({...a}));
+  turn = initTurnSettings;
+  players = initPlayersSettings;
 
   $("#game-type").text(initScoreSettings);
   initPlayers($("#players"), players);
@@ -52,8 +54,8 @@ function refresh() {
 }
 
 function reset() {
-  turn = { ...initTurnSettings};
-  players = initPlayersSettings.map(a => ({...a}));
+  turn = initTurnSettings;
+  players = initPlayersSettings;
   refresh();
 }
 

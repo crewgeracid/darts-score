@@ -71,7 +71,7 @@ button:focus {
   margin-left: 10vw;
   margin-bottom: 1em;
   padding-bottom: 2em;
-  border-bottom: 1px solid #ffffff20;
+  border-bottom: 2px solid #ffffff20;
   width: 80vw;
 }
 #game-settings span {
