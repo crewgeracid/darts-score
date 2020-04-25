@@ -192,3 +192,9 @@ button {
   width: 10vw;
   border: 1px solid rgba(239, 110, 174, 0.5);
 }
+#score-options button:nth-child(2) {
+  color: #f03090;
+}
+#score-options button:nth-child(3) {
+  color: #f00c7e;
+}
