@@ -10,9 +10,16 @@
   <link rel="stylesheet" href="./css/style.css" type="text/css">
   <script type="text/javascript" src="./js/jquery-3.5.0.min.js"></script>
   <script type="text/javascript" src="./js/const.js"></script>
+	<script type="text/javascript" src="./js/objects.js"></script>
   <script type="text/javascript" src="./js/utils.js"></script>
 </head>
 <body>
+
+	<div id="message">
+		<div class="text"></div>
+		<button id="dismiss">Dismiss</div>
+	</div>
+
   <div id="main-page">
     <h1>Darts game</h1>
     <div id="game-settings">
@@ -34,36 +41,23 @@
       </div>
     </div>
 
-    <div id="message">
-      <div id="info"></div>
-      <div id="error"></div>
-    </div>
-
     <div id="players">
-      <h3>Players</h3>
       <div class="player-html-sample">
         <span class="name">Player Name</span>
-        <span class="score">Score</span>
-        <span class="your-turn-marker">Your turn</span>
+        <span class="score">Player Score</span>
+				<span class="turn-score">
+					<button class="button-html-sample">Player Turn Score</button>
+				</span>
+				<span class="turn-score-summary">Player Turn Score Summary</span>
+				<button class="turn-score-submit">Submit</button>
       </div>
     </div>
 
-    <div id="score-selector-wrapper">
-      <h3>Submit your turn score</h3>
-      <div id="score-options">
-        <div class="score-option-html-sample">
-          <span class="label">Score Value</span>
-          <span class="buttons">
-            <button class=" button-html-sample">Multiplication Value</button>
-          </span>
-          <span class="turn-scores">
-            <button class=" turn-score-button-html-sample">Turn Score Value</button>
-          </span>
-        </div>
+    <div id="score-options">
+      <div class="score-option-html-sample">
+          <button class="button-html-sample">Score Option Value</button>
       </div>
-      <button id="score-submit">Submit</button>
     </div>
-
   </div>
 
   <script type="text/javascript" src="./js/player.js"></script>

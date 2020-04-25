@@ -8,11 +8,9 @@ body {
   align-items: center;
   text-align: center;
 }
-
-
 h1 {
   font-size: 4em;
-  margin: 1em 0 1em;
+  margin: 1em 0 0.5em;
 }
 h2 {
   font-size: 2em;
@@ -22,7 +20,6 @@ h3 {
   font-size: 1.5em;
   margin: 1em 0 1em;
 }
-
 input {
   color: #ED796F;
   transition: 0.25s;
@@ -41,7 +38,6 @@ input:hover {
   background: #ef6eae15;
   box-shadow: 0 0 0.8em 0.8em rgba(239,110,174,0.1);
 }
-
 button {
   color: #ef6eae;
   transition: 0.25s;
@@ -53,48 +49,54 @@ button {
   padding: 1em 2em;
   border-radius: 0;
 }
-button:hover,
-button:active,
-button:focus {
-  border-color: #ED796F;
-  color: #fff;
-  box-shadow: inset 0 0 0 2em #ED796F;
+
+
+#message {
+  position: absolute;
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100%;
+  padding: 50% 0;
+  text-align: center;
+  font-size: 4vw;
+  z-index: 1;
+}
+#message #dismiss {
+  margin: 5vw 0;
 }
 
 
-#game-settings {
+#main-page #game-settings {
   font-weight: 500;
   font-size: 1.5em;
   margin-bottom: 2em;
 }
-#game-settings > div:first-child {
+#main-page #game-settings > div:first-child {
   margin-left: 10vw;
   margin-bottom: 1em;
   padding-bottom: 2em;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   width: 80vw;
 }
-#game-settings span {
+#main-page #game-settings span {
   display: inline-block;
   width: 30vw;
   text-align: center;
 }
-#game-settings input {
+#main-page #game-settings input {
   width: 30vw;
   text-align: center;
 }
-
-
-button#start {
+#main-page #start {
   font-size: 2em;
 }
-
 
 
 #header {
   position: relative;
   overflow: hidden;
   padding: 0 2vw;
+  margin: 0 0 5vw;
 }
 #header h2 {
   text-align: left;
@@ -112,59 +114,81 @@ button#start {
 
 #players {
   padding: 0 2vw;
+  margin: 0 0 10vw;
   font-size: 1.5em;
   text-align: left;
 }
-#players .name {
+#players .player.turn {
+  color: #ef6eae;
+}
+#players .player > * {
+  vertical-align: middle;
+}
+#players .player .name {
   display: inline-block;
   width: 20vw;
 }
-#players .name::after {
+#players .player .score {
+  display: inline-block;
+  width: 4vw;
+}
+#players .player .name::after {
   content: ":";
 }
-#players .player .your-turn-marker {
+#players .player .turn-score {
   display: none;
 }
-#players .player.turm .your-turn-marker {
+#players .player.turn .turn-score {
   display: inline-block;
 }
-
+#players .player .turn-score-summary {
+  display: none;
+}
+#players .player .turn-score-summary::before {
+  content: " = ";
+}
+#players .player.turn .turn-score-summary {
+  display: inline-block;
+  margin: 0 1vw;
+}
+#players .player .turn-score button {
+  font-size: 2vw;
+  font-weight: 400;
+  margin: 0 0 0.3vw 0.3vw;
+  padding: 1vw 0.5vw;
+  width: 9vw;
+  margin: 0 0 0 3vw;
+  border: 1px solid rgba(239, 110, 174, 0.5);
+}
+#players .player .turn-score button::before {
+  content: "-";
+  display: block;
+  position: absolute;
+  margin-left: -2.2vw;
+  font-weight: 700;
+}
+#players .player .turn-score-submit {
+  display: none;
+  font-size: 1.8vw;
+}
+#players .player.turn .turn-score-submit {
+  display: inline-block;
+}
 
 
 #score-options {
-  margin-bottom: 2em;
+  width: 100vw;
+  columns: 3;
+  font-size: 0;
 }
-#score-options .label {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 1.5em;
-  width: 6vw;
+#score-options .score-option {
+  width: 33vw;
 }
-#score-options .buttons {
-  display: inline-block;
-  width: 38vw;
-}
-#score-options button:focus,
-#score-options button:active,
-#score-options button:hover {
-  background: none;
-  box-shadow: none;
-}
-#score-options .buttons button {
-  margin: 0.2em;
+#score-options button {
+  font-size: 2vw;
+  font-weight: 400;
+  margin: 0 0 0.3vw 0.3vw;
+  padding: 3vw 1.8vw;
+  width: 10vw;
   border: 1px solid rgba(239, 110, 174, 0.5);
-}
-#score-options .turn-scores {
-  display: inline-block;
-  width: 54vw;
-  text-align: left;
-}
-#score-options .turn-scores button {
-  margin: 0.2em;
-  border: 1px solid #fff;
-  color: #fff;
-}
-
-button#score-submit {
-  font-size: 2em;
 }
